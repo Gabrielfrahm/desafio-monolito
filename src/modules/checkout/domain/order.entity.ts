@@ -7,13 +7,13 @@ type OrderProps = {
   id?: Id;
   client: Client;
   products: Product[];
-  status: string;
+  status?: string;
 };
 
 export default class Order extends BaseEntity {
   private _client: Client;
   private _products: Product[];
-  private _status: string;
+  private _status?: string;
 
   constructor(props: OrderProps) {
     super(props.id);
